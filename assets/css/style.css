@@ -1,6 +1,6 @@
 /* --------- Variables --------- */
 :root {
-    --font-title: 'Charm', sans-serif;
+    --font-title: 'Tinos', sans-serif;
     --font-script: 'Slabo', cursive;
     --font-btn: 'Merriweather', sans-serif;
     --color-dark: #0101b2;
@@ -93,12 +93,15 @@ body {
     padding: 0.5rem 0.3rem;
     font-size: 0.8rem;
     text-transform: capitalize;
-    background-color: var(--color-primary);
+    background-color: var(--color-plate);
     opacity: 1;
     border-radius: 50px;
     width: 150px;
     box-shadow: 1px 1px 5px 1px rgba(43, 0, 255, 0.789);
 
+}
+#music-toggle{
+    opacity: 0.8;
 }
 
 #magic-music-toggle {
@@ -193,7 +196,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, #989898, #002775);
+    background: linear-gradient(to bottom right, #19ffd1, #0000006d);
     color: white;
     display: flex;
     justify-content: center;
@@ -204,7 +207,7 @@ p {
 .welcome-content {
     text-align: center;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 56, 141, 0.1);
     backdrop-filter: blur(8px);
     border-radius: 1rem;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
@@ -216,9 +219,9 @@ p {
 }
 
 #welcome-overlay button {
-    background: #ffffff;
+    background: #029eff;
     color: #000408;
-    border: none;
+    border: 1 px solid ;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border-radius: 2rem;
@@ -240,9 +243,9 @@ p {
     color: rgb(75, 96, 255);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 17px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -323,7 +326,7 @@ p {
     width: 300px;
     margin-top: 10rem;
     opacity: 1;
-    
+
 }
 
 
@@ -417,6 +420,10 @@ p {
     animation: zoomInOut 2s ease-in-out infinite;
     width: 90px;
 }
+.dresscode{
+    width: 100px;
+   
+}
 
 .icon-animado-m {
     animation: zoomInOut 2s ease-in-out infinite;
@@ -454,7 +461,6 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.5;
-    /* ajustá la transparencia acá */
     z-index: -1;
 }
 
@@ -528,47 +534,13 @@ p {
 }
 
 /* --------- Gracias --------- */
-.boom {
-    font-family: var(--font-script);
-    font-size: 2rem;
-    font-style: italic;
-    line-height: 4rem;
-    font-weight: 500;
-}
 
-.azul {
-    color: #0033fe;
-    font-size: 3.7rem;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: yellow;
-    font-weight: 500;
-    font-style: italic;
-    text-shadow: 1px 3px 5px #000000;
-
-
-
-}
-
-.amarillo {
-    color: var(--color-primary);
-    font-size: 4rem;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgb(0, 4, 255);
-    font-weight: 500;
-    font-style: italic;
-    text-shadow: 1px 3px 5px #000000;
-
-
-
-
-
-}
 
 #gracias {
     background: rgba(1, 1, 178, 0.4);
     padding: 30px 20px;
     position: relative;
-    min-height: 220px;
+    min-height: 100%;
     overflow: hidden;
 }
 
@@ -581,7 +553,6 @@ p {
     height: 100%;
     pointer-events: none;
     z-index: 100;
-    /* o más alto si no se ve */
 }
 
 
@@ -618,15 +589,19 @@ p {
 
 @media(min-width:768px) {
     .hero-overlay img {
-        width: 220px;
+        width: 320px;
         margin-top: 15rem
+    }
+     #music-toggle {
+        width: 70px;
+        height: 70px;
     }
 
 }
 
 @media(min-width:1024px) {
     .hero-overlay img {
-        width: 280px;
+        width: 400px;
         margin-top: 15rem;
         opacity: 0.8;
     }
@@ -634,31 +609,101 @@ p {
     .section-title {
         font-size: 2rem
     }
-}
-
-@media(min-width:1200px) {
-    .hero-img {
-        height: 100vh;
-        object-position: top;
-
-    }
-
-    .hero-overlay img {
-        width: 340px;
-        margin-top: 0;
-        opacity: 0.8;
+    #music-toggle {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+        opacity: 0.5;
     }
 }
+
+
 
 @media(min-width:1440px) {
     .hero-overlay img {
-        width: 450px;
+        width: 600px;
         margin-top: 5rem;
         opacity: 0.8;
     }
 
     .section-title,
     .section-title-fiesta {
-        font-size: 2rem
+        font-size: 5rem
     }
-}
+
+    #clock div {
+        width: 400px;
+    }
+
+    #clock div span {
+        font-size: 4rem;
+
+
+    }
+
+    #clock div strong {
+        font-size: 5rem;
+    }
+
+    .icon-animado-m {
+        width: 300px;
+    }
+
+    .section-title-fiesta {
+        font-size: 8rem;
+    }
+
+    p.fiesta-fecha {
+        font-size: 4rem;
+    }
+
+    .section-click {
+        font-size: 4rem;
+        width: 800px;
+    }
+
+    .btn.primary {
+        font-size: 3rem;
+        width: 24rem;
+    }
+    p{
+        font-size: 4rem;
+    }
+    .btn.outline{
+        font-size: 3.5rem;
+        width: 350px;
+    }
+    .icon-animado{
+        width: 200px;
+    }
+    .icon-animado-music{
+        width: 230px;
+    }
+    #btnGift{
+        font-size: 4rem;
+        width: 450px;
+        padding: 1rem 3rem;
+    }
+    h3.section-title-gracias{
+        font-size: 5rem;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+        line-height: 6rem;
+    }
+
+    
+#magicBtn,
+#magic-music-toggle{
+        font-size: 2rem;
+        padding: 2rem 0rem;
+        width: 400px;
+    }
+    #music-toggle {
+        width: 120px;
+        height: 120px;
+        font-size: 2rem;
+        opacity: 0.5;
+    }
+
+    }
+    

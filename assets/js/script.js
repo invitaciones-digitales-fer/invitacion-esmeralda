@@ -1,3 +1,4 @@
+
 /* ====== Countdown ====== */
 const clock = document.getElementById('clock');
 const eventDate = new Date('december 9, 2025 21:30:00').getTime();
@@ -88,7 +89,7 @@ const magicMusic = document.getElementById('magic-music'); // Referencia al nuev
 const magicMusicToggle = document.getElementById('magic-music-toggle'); // Referencia al nuevo botón
 let isMagicMusicPlaying = false; // Estado de la música mágica
 
-// Asegúrate de que magicMusic exista y no esté en conflicto
+
 if (magicMusic) {
   magicMusic.volume = 0.3; // Volumen para la música mágica (ajusta a tu gusto)
   magicMusicToggle.addEventListener('click', () => {
@@ -133,11 +134,11 @@ document.addEventListener("DOMContentLoaded", function () {
     background: { color: "transparent" },
     particles: {
       number: { value: 90, density: { enable: true, area: 700 } },
-      color: { value: ["#0000FF", "#FFD700"] },
+      color: { value: ["#0000FF", "#FFD700", "#EE82EE", "#7B68EE", "#ADFF2F", "#00FFFF", "#778899", "#2F4F4F", "FFFFFF", "DCDCDC"] },
       shape: {
-        type: ["char", "star"],
+        type: ["char", "star", "circle"],
         character: {
-          value: ["💙", "💛"],
+          value: ["❤️", "💗", "🎈", "🎉", "✨"],
           font: "Segoe UI Emoji",
           style: "",
           weight: "400",
@@ -245,95 +246,3 @@ document.getElementById("magicBtn").addEventListener("click", () => {
     }
   });
 });
-
-const magicThemes = [
-  {
-    name: "Estrellas doradas",
-    shape: { type: "star" },
-    color: ["#0000FF", "#FFD700"],
-    speed: 1.5
-  },
-  {
-    name: "Corazones rosa",
-    shape: {
-      type: "char",
-      character: {
-        value: ["💖", "💗", "❤️"],
-        font: "sans-serif",
-        style: "",
-        weight: "400"
-      }
-    },
-    color: ["#0000FF", "#FFD700"],
-    speed: 2
-  },
-  {
-    name: "Burbujas celestes",
-    shape: { type: "circle" },
-    color: ["#0000FF", "#FFD700"],
-    speed: 3
-  },
-  {
-    name: "Fiesta mágica",
-    shape: {
-      type: "char",
-      character: {
-        value: ["🎈", "🎉", "✨"],
-        font: "Verdana",
-        style: "",
-        weight: "400"
-      }
-    },
-    color: ["#0000FF", "#FFD700"],
-    speed: 5
-  }
-];
-
-const randomTheme = magicThemes[Math.floor(Math.random() * magicThemes.length)];
-
-tsParticles.load("glitter-container", {        // id del DIV dentro de #gracias
-  fullScreen: { enable: false },               // ⬅ desactivado
-  background: { color: "transparent" },
-  particles: {
-    number: {
-      value: 40,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    },
-    color: {
-      value: randomTheme.color
-    },
-    shape: randomTheme.shape,
-    opacity: {
-      value: 0.9,
-      random: true
-    },
-    size: {
-      value: 16,
-      random: { enable: true, minimumValue: 8 }
-    },
-    move: {
-      enable: true,
-      speed: 1.5,
-      direction: "none",
-      outModes: {
-        default: "out"
-      }
-    }
-  },
-  background: {
-    color: "#ffffff00"
-  },
-  fullScreen: {
-    enable: true,
-    zIndex: -1
-  }
-});
-
-
-
-
-
-
